@@ -218,9 +218,7 @@
       <option value="C">Common (C)</option>
       <option value="U">Uncommon (U)</option>
       <option value="R">Rare (R)</option>
-      <option value="RR">Double Rare (RR)</option>
       <option value="LR">Legend Rare (LR)</option>
-      <option value="SR">Secret Rare (SR)</option>
       <option value="PR">Promo (PR)</option>
     </select>
     <select id="coll-sort" onchange="renderCollection()">
@@ -253,9 +251,7 @@
       <option value="C">Common</option>
       <option value="U">Uncommon</option>
       <option value="R">Rare</option>
-      <option value="RR">Double Rare</option>
       <option value="LR">Legend Rare</option>
-      <option value="SR">Secret Rare</option>
       <option value="PR">Promo</option>
     </select>
     <select id="browse-color" onchange="doSearch(1)">
@@ -264,8 +260,6 @@
       <option value="Blue">Blue</option>
       <option value="Green">Green</option>
       <option value="White">White</option>
-      <option value="Black">Black</option>
-      <option value="Yellow">Yellow</option>
       <option value="Purple">Purple</option>
     </select>
     <button class="btn btn-primary" onclick="doSearch(1)">SEARCH</button>
@@ -515,7 +509,7 @@ async function doSearch(page=1) {
   const q = document.getElementById('browse-q').value.trim();
   const rarity = document.getElementById('browse-rarity').value;
   const color  = document.getElementById('browse-color').value;
- 
+
   const err = document.getElementById('browse-err');
   const res = document.getElementById('browse-results');
   const pg  = document.getElementById('browse-pages');
@@ -529,7 +523,7 @@ async function doSearch(page=1) {
   if (color)  p.set('color',  color);
  
   try {
-    const r = await fetch(`https://apitcg.com/api/gundam/cards?${p}`, { headers: {'x-api-key': S.apiKey} });
+    const r = await fetch(`https://gundam-proxy.edgarjos82.workers.dev?${p}`);
     if (!r.ok) {
       if (r.status===401||r.status===403) {
         err.innerHTML = `<div class="err">⚠ Invalid API key. <a href="https://apitcg.com/platform" target="_blank" style="color:var(--accent)">Get a free key here</a>.</div>`;
