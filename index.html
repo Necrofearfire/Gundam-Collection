@@ -15,7 +15,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: 'Rajdhani', sans-serif; font-size: 16px; min-height: 100vh; overflow-x: hidden; }
   body::before { content: ''; position: fixed; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.05) 2px, rgba(0,0,0,0.05) 4px); pointer-events: none; z-index: 9999; }
- 
+
   /* HEADER */
   header { background: var(--panel); border-bottom: 2px solid var(--accent); padding: 0 16px; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; box-shadow: 0 0 30px rgba(0,212,255,0.15); gap: 12px; }
   .logo { font-family: 'Orbitron', sans-serif; font-size: clamp(12px, 3.5vw, 20px); font-weight: 900; color: var(--accent); letter-spacing: 3px; text-shadow: 0 0 20px rgba(0,212,255,0.5); white-space: nowrap; }
@@ -25,13 +25,13 @@
   .stat-pill strong { color: var(--accent3); font-size: 14px; }
   .key-btn { background: none; border: 1px solid var(--border); color: var(--text-dim); font-family: 'Share Tech Mono', monospace; font-size: 10px; padding: 5px 10px; cursor: pointer; white-space: nowrap; }
   .key-btn:hover { border-color: var(--accent); color: var(--accent); }
- 
+
   /* TABS */
   .tabs { background: var(--panel); border-bottom: 1px solid var(--border); display: flex; }
   .tab { flex: 1; padding: 12px 8px; font-family: 'Orbitron', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-align: center; cursor: pointer; color: var(--text-dim); border: none; background: none; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; }
   .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
   .tab:hover:not(.active) { color: var(--text); }
- 
+
   /* TOOLBAR */
   .toolbar { background: var(--panel); border-bottom: 1px solid var(--border); padding: 10px 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
   .search-wrap { flex: 1; min-width: 160px; position: relative; }
@@ -43,22 +43,22 @@
   .view-toggle { display: flex; border: 1px solid var(--border); overflow: hidden; }
   .view-btn { background: var(--panel2); border: none; color: var(--text-dim); padding: 7px 12px; cursor: pointer; font-size: 16px; transition: background 0.2s, color 0.2s; }
   .view-btn.active { background: var(--accent); color: #000; }
- 
+
   /* MAIN */
   main { padding: 16px; max-width: 1400px; margin: 0 auto; }
   .section-label { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; padding: 10px 0 8px; border-bottom: 1px solid var(--border); margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; }
   .section-label span { color: var(--accent); }
- 
+
   /* RARITY CLASSES */
   .rc-C{--rc:#8899aa} .rc-U{--rc:#39ff14} .rc-R{--rc:#4488ff}
   .rc-RR{--rc:var(--purple)} .rc-LR{--rc:var(--gold)} .rc-SR{--rc:var(--gold)} .rc-PR{--rc:var(--accent2)}
- 
+
   /* GRID & LIST */
   #card-grid, #wish-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(155px,1fr)); gap: 12px; }
   #card-list, #wish-list { display: none; flex-direction: column; gap: 6px; }
   body.list-view #card-grid, body.list-view #wish-grid { display: none !important; }
   body.list-view #card-list, body.list-view #wish-list { display: flex !important; }
- 
+
   /* CARD TILE */
   .card-tile { background: var(--panel); border: 1px solid var(--border); position: relative; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; overflow: hidden; }
   .card-tile:hover { transform: translateY(-3px); border-color: var(--rc, var(--accent)); box-shadow: 0 8px 30px rgba(0,212,255,0.2); }
@@ -76,7 +76,7 @@
   .card-meta { display: flex; align-items: center; justify-content: space-between; gap: 4px; }
   .rarity-tag { font-family: 'Share Tech Mono', monospace; font-size: 9px; color: var(--rc, var(--text-dim)); text-transform: uppercase; letter-spacing: 1px; }
   .color-tag { font-size: 9px; font-family: 'Share Tech Mono', monospace; color: var(--text-dim); }
- 
+
   /* LIST ROW */
   .list-row { background: var(--panel); border: 1px solid var(--border); display: grid; grid-template-columns: 44px 1fr auto auto auto; align-items: center; gap: 12px; padding: 8px 12px; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
   .list-row:hover { border-color: var(--accent); background: var(--panel2); }
@@ -88,7 +88,7 @@
   .list-rarity { font-family: 'Share Tech Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; min-width: 40px; text-align: right; color: var(--rc, var(--text-dim)); }
   .list-qty { font-family: 'Orbitron', monospace; font-size: 13px; color: var(--accent); min-width: 28px; text-align: center; }
   .list-actions { display: flex; gap: 6px; }
- 
+
   /* BUTTONS */
   .icon-btn { background: var(--panel2); border: 1px solid var(--border); color: var(--text-dim); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 14px; transition: color 0.2s, border-color 0.2s; }
   .icon-btn:hover { color: var(--accent); border-color: var(--accent); }
@@ -101,7 +101,7 @@
   .btn-danger { background: var(--danger); color: #fff; }
   .btn-wish { background: transparent; color: var(--gold); border: 1px solid var(--gold); clip-path: none; }
   .btn-wish.active { background: var(--gold); color: #000; }
- 
+
   /* BROWSE RESULTS */
   .sri { background: var(--panel2); border: 1px solid var(--border); display: grid; grid-template-columns: 56px 1fr auto; gap: 12px; align-items: center; padding: 8px 12px; margin-bottom: 6px; transition: border-color 0.2s; }
   .sri:hover { border-color: var(--accent); }
@@ -115,7 +115,7 @@
   .btn-own { background: var(--accent); border: none; color: #000; font-family: 'Orbitron', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1px; padding: 6px 12px; cursor: pointer; clip-path: polygon(5px 0,100% 0,calc(100% - 5px) 100%,0 100%); white-space: nowrap; }
   .btn-own:hover { background: #fff; }
   .btn-own.added { background: var(--accent3); }
- 
+
   /* MODAL */
   .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.8); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 16px; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
   .modal-overlay.open { opacity: 1; pointer-events: all; }
@@ -127,14 +127,14 @@
   .modal-close:hover { color: var(--danger); }
   .modal-body { padding: 18px; }
   .modal-footer { padding: 14px 18px; border-top: 1px solid var(--border); display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
- 
+
   /* FORM */
   .fg { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; }
   label { font-family: 'Share Tech Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-dim); }
   input[type="number"], textarea { background: var(--panel2); border: 1px solid var(--border); color: var(--text); font-family: 'Rajdhani', sans-serif; font-size: 14px; padding: 7px 10px; outline: none; transition: border-color 0.2s; width: 100%; }
   input[type="number"]:focus, textarea:focus { border-color: var(--accent); }
   textarea { resize: vertical; min-height: 60px; }
- 
+
   /* DETAIL */
   .detail-img { width: 100%; max-height: 300px; object-fit: contain; background: var(--panel2); display: block; }
   .detail-ph { background: var(--panel2); height: 180px; display: flex; align-items: center; justify-content: center; font-size: 64px; opacity: .1; }
@@ -147,7 +147,7 @@
   .qty-btn { background: var(--panel2); border: 1px solid var(--border); color: var(--text); width: 32px; height: 32px; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: border-color 0.2s, color 0.2s; }
   .qty-btn:hover { border-color: var(--accent); color: var(--accent); }
   .qty-display { font-family: 'Orbitron', sans-serif; font-size: 22px; color: var(--accent); min-width: 36px; text-align: center; }
- 
+
   /* LOADING / EMPTY / ERROR */
   .loading { text-align: center; padding: 60px; color: var(--text-dim); font-family: 'Share Tech Mono', monospace; font-size: 12px; letter-spacing: 2px; }
   .loading::after { content: ''; animation: dots 1.5s infinite; }
@@ -157,14 +157,14 @@
   .empty strong { display: block; font-family: 'Orbitron', sans-serif; font-size: 14px; letter-spacing: 2px; margin-bottom: 8px; }
   .empty p { color: var(--text-dim); font-size: 13px; }
   .err { background: rgba(255,48,48,.1); border: 1px solid var(--danger); padding: 10px 14px; color: var(--danger); font-family: 'Share Tech Mono', monospace; font-size: 12px; margin-bottom: 12px; }
- 
+
   /* PAGINATION */
   .pagination { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 20px 0 0; }
   .page-btn { background: var(--panel2); border: 1px solid var(--border); color: var(--text-dim); padding: 6px 14px; font-family: 'Share Tech Mono', monospace; font-size: 11px; cursor: pointer; }
   .page-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
   .page-btn:disabled { opacity: .3; cursor: default; }
   .page-info { font-family: 'Share Tech Mono', monospace; font-size: 11px; color: var(--text-dim); }
- 
+
   /* RESPONSIVE */
   @media (max-width:500px) {
     #card-grid, #wish-grid { grid-template-columns: repeat(auto-fill,minmax(130px,1fr)); }
@@ -175,12 +175,12 @@
     .sri { grid-template-columns: 48px 1fr; }
     .sri-actions { grid-column: 1/-1; flex-direction: row; }
   }
- 
+
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: var(--border); }
   ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
- 
+
   .rc-LR .card-image-wrap::after, .rc-SR .card-image-wrap::after {
     content: ''; position: absolute; inset: 0;
     background: linear-gradient(115deg,transparent 20%,rgba(255,215,0,.1) 45%,rgba(255,255,255,.15) 50%,rgba(255,215,0,.1) 55%,transparent 80%);
@@ -190,23 +190,24 @@
 </style>
 </head>
 <body>
- 
+
 <header>
   <div class="logo">GUNDAM<span>·</span>REGISTRY</div>
   <div class="header-right">
     <div class="stat-pill">OWNED<br><strong id="stat-total">0</strong></div>
     <div class="stat-pill">UNIQUE<br><strong id="stat-unique">0</strong></div>
     <div class="stat-pill">WISH<br><strong id="stat-wish">0</strong></div>
-    <button class="key-btn" onclick="openModal('apikey-modal')">⚙ API KEY</button>
+    <span id="sync-status" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);white-space:nowrap"></span>
+  <button class="key-btn" onclick="openSettings()">⚙ SETTINGS</button>
   </div>
 </header>
- 
+
 <div class="tabs">
   <button class="tab active" onclick="switchTab('collection')">⊞ COLLECTION</button>
   <button class="tab" onclick="switchTab('browse')">⌕ BROWSE</button>
   <button class="tab" onclick="switchTab('wishlist')">★ WISHLIST</button>
 </div>
- 
+
 <!-- COLLECTION TAB -->
 <div id="tab-collection">
   <div class="toolbar">
@@ -218,7 +219,9 @@
       <option value="C">Common (C)</option>
       <option value="U">Uncommon (U)</option>
       <option value="R">Rare (R)</option>
+      <option value="RR">Double Rare (RR)</option>
       <option value="LR">Legend Rare (LR)</option>
+      <option value="SR">Secret Rare (SR)</option>
       <option value="PR">Promo (PR)</option>
     </select>
     <select id="coll-sort" onchange="renderCollection()">
@@ -239,7 +242,7 @@
     <div id="card-list"></div>
   </main>
 </div>
- 
+
 <!-- BROWSE TAB -->
 <div id="tab-browse" style="display:none">
   <div class="toolbar">
@@ -251,7 +254,9 @@
       <option value="C">Common</option>
       <option value="U">Uncommon</option>
       <option value="R">Rare</option>
+      <option value="RR">Double Rare</option>
       <option value="LR">Legend Rare</option>
+      <option value="SR">Secret Rare</option>
       <option value="PR">Promo</option>
     </select>
     <select id="browse-color" onchange="doSearch(1)">
@@ -260,6 +265,8 @@
       <option value="Blue">Blue</option>
       <option value="Green">Green</option>
       <option value="White">White</option>
+      <option value="Black">Black</option>
+      <option value="Yellow">Yellow</option>
       <option value="Purple">Purple</option>
     </select>
     <button class="btn btn-primary" onclick="doSearch(1)">SEARCH</button>
@@ -270,7 +277,7 @@
     <div id="browse-pages"></div>
   </main>
 </div>
- 
+
 <!-- WISHLIST TAB -->
 <div id="tab-wishlist" style="display:none">
   <div class="toolbar">
@@ -288,35 +295,58 @@
     <div id="wish-list"></div>
   </main>
 </div>
- 
-<!-- API KEY MODAL -->
-<div class="modal-overlay" id="apikey-modal">
-  <div class="modal" style="max-width:460px">
+
+<!-- SETTINGS MODAL -->
+<div class="modal-overlay" id="settings-modal">
+  <div class="modal" style="max-width:500px">
     <div class="modal-header">
-      <div class="modal-title">API TCG — CONNECT</div>
-      <button class="modal-close" onclick="closeModal('apikey-modal')">✕</button>
+      <div class="modal-title">⚙ SETTINGS</div>
+      <button class="modal-close" onclick="closeModal('settings-modal')">✕</button>
     </div>
     <div class="modal-body">
-      <p style="color:var(--text-dim);font-size:13px;margin-bottom:14px;line-height:1.6">
-        Get a free API key at <a href="https://apitcg.com/platform" target="_blank" style="color:var(--accent)">apitcg.com/platform</a> to browse and search Gundam cards from the API TCG database.
-        Your key is stored only in your browser.
+
+      <!-- API TCG -->
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--accent);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)">API TCG — CARD DATABASE</div>
+      <p style="color:var(--text-dim);font-size:13px;margin-bottom:10px;line-height:1.6">Get a free key at <a href="https://apitcg.com/platform" target="_blank" style="color:var(--accent)">apitcg.com/platform</a> to browse Gundam cards.</p>
+      <div class="fg">
+        <label>API TCG Key (x-api-key)</label>
+        <input type="text" id="apikey-input" placeholder="Paste your API TCG key…">
+      </div>
+      <div style="display:flex;gap:8px;margin-bottom:18px">
+        <button class="btn btn-primary" onclick="saveApiKey()">SAVE KEY</button>
+        <button class="btn btn-ghost" onclick="clearApiKey()">CLEAR</button>
+        <span style="margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);align-self:center">STATUS: <span id="key-status">—</span></span>
+      </div>
+
+      <!-- GITHUB GIST -->
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--accent);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)">GITHUB GIST — CLOUD SYNC</div>
+      <p style="color:var(--text-dim);font-size:13px;margin-bottom:10px;line-height:1.6">
+        Syncs your collection across devices. Create a token at
+        <a href="https://github.com/settings/tokens/new?scopes=gist&description=Gundam+Registry" target="_blank" style="color:var(--accent)">github.com/settings/tokens</a>
+        — enable the <b style="color:var(--text)">gist</b> scope only. Leave Gist ID blank on first use and it will be created automatically.
       </p>
       <div class="fg">
-        <label>Your x-api-key</label>
-        <input type="text" id="apikey-input" placeholder="Paste API key here…" onkeydown="if(event.key==='Enter')saveApiKey()">
+        <label>GitHub Personal Access Token</label>
+        <input type="text" id="gh-token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
       </div>
-      <div id="apikey-err"></div>
-      <div style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim)">
-        STATUS: <span id="key-status" style="color:var(--accent3)">NOT CONFIGURED</span>
+      <div class="fg">
+        <label>Gist ID <span style="color:var(--text-dim);font-size:9px">(auto-filled after first save)</span></label>
+        <input type="text" id="gh-gist-input" placeholder="Leave blank to create a new Gist">
       </div>
+      <div style="display:flex;gap:8px;margin-bottom:6px">
+        <button class="btn btn-primary" onclick="saveGhToken()">SAVE &amp; SYNC</button>
+        <button class="btn btn-ghost" onclick="clearGhToken()">DISCONNECT</button>
+        <button class="btn btn-ghost" onclick="pullFromGist()">↓ PULL NOW</button>
+      </div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-top:6px">SYNC: <span id="gist-status">—</span></div>
+
     </div>
     <div class="modal-footer">
-      <button class="btn btn-ghost" onclick="clearApiKey()">CLEAR KEY</button>
-      <button class="btn btn-primary" onclick="saveApiKey()">SAVE &amp; CONNECT</button>
+      <button class="btn btn-ghost" onclick="closeModal('settings-modal')">CLOSE</button>
     </div>
   </div>
 </div>
- 
+
 <!-- DETAIL MODAL -->
 <div class="modal-overlay" id="detail-modal">
   <div class="modal">
@@ -328,7 +358,7 @@
     <div class="modal-footer" id="detail-footer"></div>
   </div>
 </div>
- 
+
 <!-- EDIT MODAL -->
 <div class="modal-overlay" id="edit-modal">
   <div class="modal" style="max-width:360px">
@@ -356,7 +386,7 @@
     </div>
   </div>
 </div>
- 
+
 <script>
 // ─── STATE ───────────────────────────────────────────────────────────────────
 const SK = 'gcg_v3';
@@ -364,16 +394,97 @@ let S = JSON.parse(localStorage.getItem(SK) || '{}');
 if (!S.collection) S.collection = {};  // { [id]: { card, qty, notes, addedAt } }
 if (!S.wishlist)   S.wishlist   = {};  // { [id]: { card } }
 if (!S.apiKey)     S.apiKey     = '';
- 
+// GitHub Gist sync — stored only in localStorage (never in the Gist itself)
+const GH_TOKEN_KEY = 'gcg_gh_token';
+const GH_GIST_KEY  = 'gcg_gh_gist';
+let ghToken  = localStorage.getItem(GH_TOKEN_KEY) || '';
+let ghGistId = localStorage.getItem(GH_GIST_KEY)  || '';
+let syncTimer = null;
+
 let currentTab = 'collection';
 let browseCards = [];
 let browsePage = 1;
 let browseTotal = 0;
 const PAGE_SZ = 25;
 let editId = null;
- 
-function save() { localStorage.setItem(SK, JSON.stringify(S)); updateStats(); }
- 
+
+// ─── SYNC ─────────────────────────────────────────────────────────────────────
+function setSyncStatus(msg, color='var(--text-dim)') {
+  const el = document.getElementById('sync-status');
+  if (el) { el.textContent = msg; el.style.color = color; }
+}
+
+async function pushToGist() {
+  if (!ghToken) return;
+  setSyncStatus('SAVING…', 'var(--accent)');
+  const payload = { collection: S.collection, wishlist: S.wishlist };
+  try {
+    if (!ghGistId) {
+      // Create new gist
+      const res = await fetch('https://api.github.com/gists', {
+        method: 'POST',
+        headers: { 'Authorization': `token ${ghToken}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          description: 'Gundam Card Registry — collection data',
+          public: false,
+          files: { 'gundam-collection.json': { content: JSON.stringify(payload) } }
+        })
+      });
+      if (!res.ok) throw new Error(`GitHub ${res.status}`);
+      const json = await res.json();
+      ghGistId = json.id;
+      localStorage.setItem(GH_GIST_KEY, ghGistId);
+    } else {
+      // Update existing gist
+      const res = await fetch(`https://api.github.com/gists/${ghGistId}`, {
+        method: 'PATCH',
+        headers: { 'Authorization': `token ${ghToken}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          files: { 'gundam-collection.json': { content: JSON.stringify(payload) } }
+        })
+      });
+      if (!res.ok) throw new Error(`GitHub ${res.status}`);
+    }
+    setSyncStatus('SYNCED ✓', 'var(--accent3)');
+  } catch(e) {
+    setSyncStatus(`SYNC FAILED: ${e.message}`, 'var(--danger)');
+  }
+}
+
+async function pullFromGist() {
+  if (!ghToken || !ghGistId) return;
+  setSyncStatus('LOADING…', 'var(--accent)');
+  try {
+    const res = await fetch(`https://api.github.com/gists/${ghGistId}`, {
+      headers: { 'Authorization': `token ${ghToken}` }
+    });
+    if (!res.ok) throw new Error(`GitHub ${res.status}`);
+    const json = await res.json();
+    const content = json.files?.['gundam-collection.json']?.content;
+    if (!content) throw new Error('File not found in Gist');
+    const data = JSON.parse(content);
+    S.collection = data.collection || {};
+    S.wishlist   = data.wishlist   || {};
+    localStorage.setItem(SK, JSON.stringify(S));
+    setSyncStatus('SYNCED ✓', 'var(--accent3)');
+    updateStats();
+    renderCollection();
+  } catch(e) {
+    setSyncStatus(`LOAD FAILED: ${e.message}`, 'var(--danger)');
+  }
+}
+
+function save() {
+  localStorage.setItem(SK, JSON.stringify(S));
+  updateStats();
+  // Debounce Gist push — wait 1.5s after last change
+  if (ghToken) {
+    clearTimeout(syncTimer);
+    syncTimer = setTimeout(pushToGist, 1500);
+    setSyncStatus('PENDING…', 'var(--text-dim)');
+  }
+}
+
 // ─── STATS ───────────────────────────────────────────────────────────────────
 function updateStats() {
   const vals = Object.values(S.collection);
@@ -381,11 +492,12 @@ function updateStats() {
   document.getElementById('stat-unique').textContent = vals.length;
   document.getElementById('stat-wish').textContent = Object.keys(S.wishlist).length;
   const ks = document.getElementById('key-status');
-  if (ks) ks.textContent = S.apiKey ? 'CONNECTED' : 'NOT CONFIGURED';
-  if (ks) ks.style.color = S.apiKey ? 'var(--accent3)' : 'var(--danger)';
+  if (ks) { ks.textContent = S.apiKey ? 'CONNECTED' : 'NOT CONFIGURED'; ks.style.color = S.apiKey ? 'var(--accent3)' : 'var(--danger)'; }
+  const gs = document.getElementById('gist-status');
+  if (gs) { gs.textContent = ghToken ? (ghGistId ? `GIST: ${ghGistId.substring(0,8)}…` : 'TOKEN SET') : 'NOT CONNECTED'; gs.style.color = ghToken ? 'var(--accent3)' : 'var(--text-dim)'; }
 }
 updateStats();
- 
+
 // ─── TABS ─────────────────────────────────────────────────────────────────────
 function switchTab(tab) {
   currentTab = tab;
@@ -393,17 +505,17 @@ function switchTab(tab) {
     document.querySelectorAll('.tab')[i].classList.toggle('active', t===tab);
     document.getElementById('tab-'+t).style.display = t===tab ? '' : 'none';
   });
-  if (tab === 'browse' && !S.apiKey) openModal('apikey-modal');
+  if (tab === 'browse' && !S.apiKey) openModal('settings-modal');
   if (tab === 'collection') renderCollection();
   if (tab === 'wishlist')   renderWishlist();
 }
- 
+
 // ─── VIEW ─────────────────────────────────────────────────────────────────────
 function setView(v) {
   document.body.classList.toggle('list-view', v==='list');
   document.querySelectorAll('.view-btn').forEach((b,i) => b.classList.toggle('active', (i===0)===(v==='grid')));
 }
- 
+
 // ─── HELPERS ─────────────────────────────────────────────────────────────────
 const RO = {C:1,U:2,R:3,RR:4,LR:5,SR:5,PR:3};
 const RL = {C:'C',U:'UC',R:'R',RR:'RR',LR:'LR',SR:'SR',PR:'PR'};
@@ -418,7 +530,7 @@ function cardImg(card, style='') {
 function stripHtml(h) { return (h||'').replace(/<br\s*\/?>/gi,'\n').replace(/<[^>]*>/g,'').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&'); }
 function inC(id) { return !!S.collection[id]; }
 function inW(id) { return !!S.wishlist[id]; }
- 
+
 // ─── COLLECTION RENDER ───────────────────────────────────────────────────────
 function renderCollection() {
   const q = (document.getElementById('coll-search')?.value||'').trim().toLowerCase();
@@ -435,7 +547,7 @@ function renderCollection() {
     return (a.card.name||'').localeCompare(b.card.name||'');
   });
   document.getElementById('coll-count').textContent = `${entries.length} card${entries.length!==1?'s':''}`;
- 
+
   const grid = document.getElementById('card-grid');
   const list = document.getElementById('card-list');
   if (!entries.length) {
@@ -446,7 +558,7 @@ function renderCollection() {
   grid.innerHTML = entries.map(e=>tile(e.card,e.qty)).join('');
   list.innerHTML = entries.map(e=>listRow(e.card,e.qty,'coll')).join('');
 }
- 
+
 function tile(card, qty) {
   const cls = rc(card.rarity);
   const wished = inW(card.id);
@@ -466,7 +578,7 @@ function tile(card, qty) {
     </div>
   </div>`;
 }
- 
+
 function listRow(card, qty, mode) {
   const cls = rc(card.rarity);
   const id = esc(card.id);
@@ -484,7 +596,7 @@ function listRow(card, qty, mode) {
     <div class="list-actions" onclick="event.stopPropagation()">${actions}</div>
   </div>`;
 }
- 
+
 // ─── WISHLIST RENDER ──────────────────────────────────────────────────────────
 function renderWishlist() {
   const q = (document.getElementById('wish-search')?.value||'').trim().toLowerCase();
@@ -501,7 +613,7 @@ function renderWishlist() {
   grid.innerHTML = entries.map(e=>tile(e.card,null)).join('');
   list.innerHTML = entries.map(e=>listRow(e.card,null,'wish')).join('');
 }
- 
+
 // ─── BROWSE & API ─────────────────────────────────────────────────────────────
 async function doSearch(page=1) {
   if (!S.apiKey) { openModal('apikey-modal'); return; }
@@ -516,12 +628,12 @@ async function doSearch(page=1) {
   err.innerHTML = '';
   res.innerHTML = `<div class="loading">SCANNING DATABASE</div>`;
   pg.innerHTML  = '';
- 
+
   const p = new URLSearchParams({ page, limit: PAGE_SZ });
   if (q)      p.set('name',   q);
   if (rarity) p.set('rarity', rarity);
   if (color)  p.set('color',  color);
- 
+
   try {
     const r = await fetch(`https://gundam-proxy.edgarjos82.workers.dev?${p}`);
     if (!r.ok) {
@@ -544,7 +656,7 @@ async function doSearch(page=1) {
     res.innerHTML = '';
   }
 }
- 
+
 function renderBrowse() {
   const el = document.getElementById('browse-results');
   if (!browseCards.length) {
@@ -572,7 +684,7 @@ function renderBrowse() {
     </div>`;
   }).join('');
 }
- 
+
 function renderPages() {
   const total = Math.ceil(browseTotal/PAGE_SZ);
   if (total<=1) { document.getElementById('browse-pages').innerHTML=''; return; }
@@ -583,7 +695,7 @@ function renderPages() {
       <button class="page-btn" ${browsePage>=total?'disabled':''} onclick="doSearch(${browsePage+1})">NEXT ▶</button>
     </div>`;
 }
- 
+
 // ─── ADD / REMOVE ─────────────────────────────────────────────────────────────
 function addFromBrowse(id, btn) {
   const card = browseCards.find(c=>c.id===id) || S.wishlist[id]?.card;
@@ -596,7 +708,7 @@ function addFromBrowse(id, btn) {
   save();
   if (btn) { btn.textContent=`✓ ×${S.collection[id].qty}`; btn.classList.add('added'); }
 }
- 
+
 function removeCard(id, event) {
   if (event) event.stopPropagation();
   if (!confirm('Remove from collection?')) return;
@@ -604,7 +716,7 @@ function removeCard(id, event) {
   save();
   renderCollection();
 }
- 
+
 function toggleWish(id, cardJson, event) {
   if (event) event.stopPropagation();
   if (inW(id)) {
@@ -620,14 +732,14 @@ function toggleWish(id, cardJson, event) {
   if (currentTab==='wishlist') renderWishlist();
   if (currentTab==='collection') renderCollection();
 }
- 
+
 function removeWish(id, event) {
   if (event) event.stopPropagation();
   delete S.wishlist[id];
   save();
   renderWishlist();
 }
- 
+
 // ─── EDIT MODAL ───────────────────────────────────────────────────────────────
 function openEdit(id, event) {
   if (event) event.stopPropagation();
@@ -639,7 +751,7 @@ function openEdit(id, event) {
   document.getElementById('edit-notes').value = entry.notes||'';
   openModal('edit-modal');
 }
- 
+
 function adjustQty(d) {
   if (!editId || !S.collection[editId]) return;
   const e = S.collection[editId];
@@ -647,7 +759,7 @@ function adjustQty(d) {
   document.getElementById('edit-qty').textContent = e.qty;
   save();
 }
- 
+
 function saveEdit() {
   if (!editId || !S.collection[editId]) return;
   S.collection[editId].notes = document.getElementById('edit-notes').value;
@@ -655,7 +767,7 @@ function saveEdit() {
   closeModal('edit-modal');
   renderCollection();
 }
- 
+
 function removeEditCard() {
   if (!editId) return;
   if (!confirm('Remove from collection?')) return;
@@ -664,7 +776,7 @@ function removeEditCard() {
   closeModal('edit-modal');
   renderCollection();
 }
- 
+
 // ─── DETAIL MODAL ─────────────────────────────────────────────────────────────
 function openDetail(id) {
   let card = S.collection[id]?.card || S.wishlist[id]?.card || browseCards.find(c=>c.id===id);
@@ -673,7 +785,7 @@ function openDetail(id) {
   const wished = inW(id);
   const entry = owned ? S.collection[id] : null;
   const src = card.images?.large || card.images?.small || '';
- 
+
   document.getElementById('detail-title').textContent = card.name.toUpperCase().substring(0,34);
   document.getElementById('detail-body').innerHTML = `
     ${src
@@ -695,7 +807,7 @@ function openDetail(id) {
     ${entry?.notes ? `<div class="df-label" style="margin-top:10px">NOTES</div><div class="effect-box">${esc(entry.notes)}</div>` : ''}
     <div style="margin-top:14px;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim)">${esc(card.set?.name||'')}${card.getIt?' · '+esc(card.getIt):''}</div>
   `;
- 
+
   const cj = esc(JSON.stringify(card));
   document.getElementById('detail-footer').innerHTML = `
     <button class="btn btn-wish ${wished?'active':''}" onclick="toggleWish('${esc(id)}','${cj}',event)">${wished?'★ WISHLISTED':'☆ WISHLIST'}</button>
@@ -704,10 +816,10 @@ function openDetail(id) {
       : `<button class="btn btn-primary" onclick="quickAdd('${esc(id)}','${cj}',this)">+ OWN</button>`}
     <button class="btn btn-ghost" onclick="closeModal('detail-modal')">CLOSE</button>
   `;
- 
+
   openModal('detail-modal');
 }
- 
+
 function quickAdd(id, cardJson, btn) {
   let card = browseCards.find(c=>c.id===id) || S.wishlist[id]?.card;
   if (!card && cardJson) try { card = JSON.parse(cardJson); } catch(e){}
@@ -724,34 +836,73 @@ function quickAdd(id, cardJson, btn) {
     btn.classList.add('btn-ghost');
   }
 }
- 
+
 // ─── API KEY ──────────────────────────────────────────────────────────────────
 function saveApiKey() {
   const key = document.getElementById('apikey-input').value.trim();
   if (!key) return;
   S.apiKey = key;
   save();
-  closeModal('apikey-modal');
-  document.getElementById('apikey-input').value = '';
+  updateStats();
   if (currentTab === 'browse') doSearch(1);
 }
- 
+
 function clearApiKey() {
   S.apiKey = '';
   save();
   document.getElementById('apikey-input').value = '';
   document.getElementById('apikey-err').innerHTML = '';
 }
- 
+
+// ─── GITHUB GIST SYNC ────────────────────────────────────────────────────────
+function saveGhToken() {
+  const token = document.getElementById('gh-token-input').value.trim();
+  const gistId = document.getElementById('gh-gist-input').value.trim();
+  if (!token) return;
+  ghToken  = token;
+  ghGistId = gistId;
+  localStorage.setItem(GH_TOKEN_KEY, ghToken);
+  localStorage.setItem(GH_GIST_KEY,  ghGistId);
+  updateStats();
+  closeModal('settings-modal');
+  if (ghGistId) {
+    pullFromGist();
+  } else {
+    setSyncStatus('TOKEN SAVED — WILL CREATE GIST ON NEXT SAVE', 'var(--accent)');
+  }
+}
+
+function clearGhToken() {
+  ghToken = ''; ghGistId = '';
+  localStorage.removeItem(GH_TOKEN_KEY);
+  localStorage.removeItem(GH_GIST_KEY);
+  document.getElementById('gh-token-input').value = '';
+  document.getElementById('gh-gist-input').value  = '';
+  setSyncStatus('DISCONNECTED', 'var(--text-dim)');
+  updateStats();
+}
+
+function openSettings() {
+  document.getElementById('gh-token-input').value = ghToken;
+  document.getElementById('gh-gist-input').value  = ghGistId;
+  updateStats();
+  openModal('settings-modal');
+}
+
 // ─── MODALS ───────────────────────────────────────────────────────────────────
 function openModal(id)  { document.getElementById(id).classList.add('open'); }
 function closeModal(id) { document.getElementById(id).classList.remove('open'); }
 document.querySelectorAll('.modal-overlay').forEach(o =>
   o.addEventListener('click', e => { if (e.target===o) closeModal(o.id); })
 );
- 
+
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 renderCollection();
+if (ghToken && ghGistId) {
+  pullFromGist();
+} else if (ghToken) {
+  setSyncStatus('TOKEN SET — SAVE A CARD TO CREATE GIST', 'var(--accent)');
+}
 </script>
 </body>
 </html>
